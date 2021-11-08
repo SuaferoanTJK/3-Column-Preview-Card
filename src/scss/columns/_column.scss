@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.column{
+    padding: 4rem;
+    &:nth-child(1){
+        background-color: v.$brightOrange;
+    }
+    &:nth-child(2){
+        background-color: v.$darkCyan;
+    }
+    &:nth-child(3){
+        background-color: v.$veryDarkCyan;
+    }
+    &__image{
+        width: 7rem;
+    }
+    &__info{
+        padding: 4rem .7rem 2rem 0;
+        @include m.desktop{
+            padding: 4rem 5rem 2rem 0;
+        }
+    }
+    &__heading{
+        color: v.$veryLightGray;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+    }
+    &__description{
+        color: v.$transparentWhite;
+        font-weight: 400;
+        font-size: 1.7rem;
+        padding: 2rem 0 3rem 0;
+        @include m.tablet{
+            min-height: 30rem;    
+        }
+        @include m.desktop{
+            min-height: 25rem;
+        }
+    }
+    &__link{
+        @include m.btn;
+        &--Sedan{
+            color: v.$brightOrange;
+            &:hover{
+                background-color: v.$brightOrange; 
+            }
+        }
+        &--SUVs{
+            color: v.$darkCyan;
+            &:hover{
+                background-color: v.$darkCyan; 
+            }
+        }
+        &--Luxury{
+            color: v.$veryDarkCyan;
+            &:hover{
+                background-color: v.$veryDarkCyan; 
+            }
+        }
+    }
+}
